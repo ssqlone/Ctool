@@ -11,7 +11,7 @@ import {watch} from "vue";
 import { MessageType, composerize } from 'composerize-ts';
 
 const action = useAction(await initialize({
-    input: "docker run -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro --restart always --log-opt max-size=1g nginx",
+    input: "docker run -p 80:80 --restart always --log-opt max-size=1g nginx",
 }, {paste: false}))
 
 const output = $computed(() => {
